@@ -22,14 +22,14 @@ class ComDev:
 		if self.com.isOpen():
 			return True
 		
-	def rec_data(self):	#接收的数据组
+	def rec_data(self):	#Received data set
 		#sign=True
 		r_data=[]
 		while True:   
 			r_data = self.com.read(25)#send 25 char every time
 			if r_data=""
 					continue
-			if r_data[0]=='beg' and r_data[-1]=='$':
+			if r_data[0]=='beg' and r_data[-1]=='$':#own coding
 				#rr_data=struct.unpack('B', r_data)
 				data[0]=rr_data[1]
 				data[1]=rr_data[2]
